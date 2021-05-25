@@ -1,0 +1,9 @@
+{% if cooks %}
+    <ul>
+    {% for cook in cooks %}
+        <li><a href="{{ url_for('cook.detail', cook_id=cook.id) }}">{{ cook.cook_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>요리가 없습니다.</p>
+{% endif %}
